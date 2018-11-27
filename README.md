@@ -1,4 +1,4 @@
-#JavaScript: Funkcje
+# JavaScript: Funkcje
 
 ### Cwiczenie 1 `Zestaw1/cw1.html`
 1. Zaimplementuj funkcję zwracającą kwadrat liczby podanej jako parametr.
@@ -58,3 +58,18 @@ Wyświetl wygenerowaną zawartość JSON na konsoli. Co stało się z metodami o
 2. Przygotuj obiekt JSON reprezentujący strukturę obiektu samochodu. Skonwertuj dane
 JSON do obiektu JavaScript. Sprawdź działanie metod toString() i valueOf() dla tak
 utworzonego obiektu. Czy metoda zwiekszMoc również dla niego zadziała
+
+# JavaScript: Klasy
+
+### Cwiczenie 1 `Zestaw3/cw1.html`
+
+1. Zdefiniuj klasę Osoba do reprezentacji osób posiadających imię i wiek. Zdefiniuj w klasie
+odpowiedni konstruktor 2-argumentowy oraz metodę przedstaw() zwracającą tekstową
+reprezentację zawartości obiektu np. w formacie „Jestem Marek, mam 25 lat”.
+
+2. Utwórz obiekt klasy Osoba i wypisz jego zawartość na konsoli korzystając z metody
+przedstaw().
+
+3. Zmień utworzonej osobie imię i wiek.
+
+4. Ponownie wypisz utworzony obiekt na konsoli.
