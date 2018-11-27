@@ -1,0 +1,47 @@
+<script>
+    var samochod = {
+        marka:"Fiat",
+        cena:200,
+        moc:100,
+        zwiekszMoc : function(wartosc) {
+            if (!isNaN(parseInt(wartosc)))
+                this.moc += wartosc;
+        }
+    };
+
+    function car(marka,cena,moc) {
+        this.marka = marka;
+        this.cena = cena;
+        this.moc = moc;
+
+        this.zwiekszMoc = function (wartosc) {
+            if(!isNaN(parseInt(wartosc)))
+                this.moc += wartosc;
+        };
+
+        this.toString  = function () {
+            return this;
+        };
+    }
+
+    console.log(samochod);
+
+    samochod.zwiekszMoc(50);
+
+    console.log(samochod);
+
+    var samochody = [
+        new car('BMW',10,20),
+        new car('Audi',40,20),
+        new car('Mercedes',70,20)
+    ];
+
+    samochody.forEach(item => console.log(item));
+
+    samochody[1].zwiekszMoc(100);
+
+    samochody.forEach(item => console.log(item));
+
+    console.log(samochody[1].toString());
+    console.log(samochody[1].valueOf());
+</script>

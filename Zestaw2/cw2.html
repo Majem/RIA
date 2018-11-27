@@ -1,0 +1,33 @@
+<script>
+    function car(marka,cena,moc) {
+        this.marka = marka;
+        this.cena = cena;
+        this.moc = moc;
+
+        this.zwiekszMoc = function (wartosc) {
+            if(!isNaN(parseInt(wartosc)))
+                this.moc += wartosc;
+        };
+
+        this.toString  = function () {
+            return this;
+        };
+    }
+
+    var samochody = [
+        new car('BMW',10,20),
+        new car('Audi',40,20),
+        new car('Mercedes',70,20)
+    ];
+
+
+    console.log(JSON.stringify(samochody[1]));
+    // Metody obiektu zostały pominięte
+
+    var samochod = JSON.parse("{\"marka\":\"Audi\",\"cena\":40,\"moc\":20}");
+    console.log(samochod.toString());
+    console.log(samochod.valueOf());
+    console.log(samochod.zwiekszMoc(150));
+    console.log(samochod);
+    // Metody toString oraz valueOf Działają. Natomiast zwiekszMoc nie działa ze względu na brak struktury w stringu JSON
+</script>
