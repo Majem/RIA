@@ -1,0 +1,19 @@
+<script>
+    function suma() {
+        var suma = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            var liczba = parseInt(arguments[i]);
+            console.log(liczba);
+            if(!isNaN(liczba))
+                suma += liczba;
+        }
+
+        if(suma > 0)
+            return suma;
+        else
+            return NaN;
+    }
+
+    alert(suma('a'));
+    alert(suma(1,54,'a'));
+</script>
