@@ -73,3 +73,28 @@ przedstaw().
 3. Zmień utworzonej osobie imię i wiek.
 
 4. Ponownie wypisz utworzony obiekt na konsoli.
+
+# Biblioteka jQuery
+
+### Cwiczenie 1 `Zestaw4/cw1.html`
+
+1. Utwórz stronę HTML zawierającą nienumerowaną listę punktów <LI>, np.
+ Polska
+ Niemcy
+ Czechy
+2. Dodaj kod JavaScript+jQuery, który po załadowaniu dokumentu ponumeruje pozycje listy
+dopisując na początku kolejny numer pozycji pogrubioną czcionką, np.
+ 1 Polska
+ 2 Niemcy
+ 3 Czechy
+Wskazówka: Wykorzystaj metody .each i .prepend
+
+### Cwiczenie 2 `Zestaw4/cw2.html`
+
+1. Utwórz stronę HTML zawierającą formularz z jednym polem tekstowym.
+
+2. Dodaj kod JavaScript+jQuery, który po zmianie zawartości pola tekstowego (i jego
+opuszczeniu) będzie dopisywał na końcu dokumentu element `<p>` z tekstem „Zmieniono
+tekst na: <tu_aktualny_tekst_z_pola>.
+Wskazówka: Wykorzystaj metodę .change do podpięcia własnej funkcji reagującej na zmianę
+zawartości pola.

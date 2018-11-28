@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="target">
+    </form>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#target').change(function () {
+            $('<p>Zmieniono tekst na: ' + $(this).val() + '</p>').appendTo('body');
+        });
+    })
+</script>
