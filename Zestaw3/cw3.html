@@ -1,0 +1,37 @@
+<script>
+    class Osoba {
+        constructor(imie, wiek) {
+            this.imie(imie);
+            this.wiek(wiek);
+        }
+
+        przedstaw() {
+            return 'Jestem ' + this.imie() + ', mam ' + this.wiek() + ' lat';
+        }
+
+        get imie() {
+            return this.imie;
+        }
+
+        get wiek() {
+            return this.wiek;
+        }
+
+        set imie(imie) {
+            this.imie = imie;
+        }
+
+        set wiek(wiek) {
+            this.wiek = wiek;
+        }
+    }
+
+    var os = new Osoba('Mateusz',22);
+
+    console.log(os.przedstaw());
+
+    os.imie = 'Darek';
+    os.wiek = 60;
+
+    console.log(os.przedstaw());
+</script>
