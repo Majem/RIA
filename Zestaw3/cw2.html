@@ -1,0 +1,35 @@
+<script>
+    class Osoba {
+        constructor(imie, wiek,zawod) {
+            this.imie = imie;
+            this.wiek= wiek;
+            this.zawod = zawod;
+            this.przedstaw = function () {
+                return 'Jestem ' + this.imie + ', mam ' + this.wiek + ' lat i pracuje  jako' + this.zawod;
+            }
+        }
+
+
+    }
+
+    class Pracownik {
+        constructor(imie, wiek, zawod) {
+            this.zawod = new Osoba(imie,wiek, zawod);
+        }
+
+        przedstaw() {
+            return this.zawod.przedstaw();
+        }
+
+
+    }
+
+    var os = new Pracownik('Mateusz',22,' pracownik');
+    console.log(os.przedstaw());
+
+    os.zawod.wiek = 50;
+    os.zawod.imie = 'Stefan';
+
+    console.log(os.przedstaw());
+
+</script>
