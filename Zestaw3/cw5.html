@@ -1,12 +1,16 @@
 <script>
     class Osoba {
         constructor(imie, wiek) {
-            this.imie = imie;
+            this.imie = Osoba.formatujImie(imie);
             this.wiek = wiek;
         }
 
         przedstaw() {
             return 'Jestem ' + this.imie + ', mam ' + this.wiek + ' lat';
+        }
+
+        static formatujImie(imie) {
+            return imie.charAt(0).toUpperCase() + imie.slice(1).toLowerCase();
         }
 
         get imie() {
@@ -22,11 +26,19 @@
         }
 
         set wiek(wiek) {
+            wiek = parseInt(wiek);
+            if(isNaN(wiek))
+                throw new TypeError('Wiek musi byc liczba');
+
+            if(wiek < 0)
+                throw new RangeError('Wiek musi byc wiekszy niz 0');
+
             this._wiek = wiek;
         }
     }
 
-    var os = new Osoba('Mateusz',22);
+    var os = new Osoba('mAteusz',-5);
+    var os = new Osoba('mAteusz','a');
 
     console.log(os.przedstaw());
 

@@ -1,12 +1,16 @@
 <script>
     class Osoba {
         constructor(imie, wiek) {
-            this.imie = imie;
+            this.imie = Osoba.formatujImie(imie);
             this.wiek = wiek;
         }
 
         przedstaw() {
             return 'Jestem ' + this.imie + ', mam ' + this.wiek + ' lat';
+        }
+
+        static formatujImie(imie) {
+            return imie.charAt(0).toUpperCase() + imie.slice(1).toLowerCase();
         }
 
         get imie() {
@@ -26,7 +30,7 @@
         }
     }
 
-    var os = new Osoba('Mateusz',22);
+    var os = new Osoba('mAteusz',22);
 
     console.log(os.przedstaw());
 
